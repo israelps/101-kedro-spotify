@@ -4,6 +4,16 @@
 #
 #    pip-compile /home/israel/pandawans/101-kedro-spotify/src/requirements.in
 #
+aiobotocore==2.0.1
+    # via s3fs
+aiohttp==3.8.1
+    # via
+    #   aiobotocore
+    #   s3fs
+aioitertools==0.8.0
+    # via aiobotocore
+aiosignal==1.2.0
+    # via aiohttp
 anyconfig==0.10.1
     # via kedro
 anyio==3.4.0
@@ -18,8 +28,11 @@ argon2-cffi-bindings==21.2.0
     # via argon2-cffi
 arrow==1.2.1
     # via jinja2-time
+async-timeout==4.0.1
+    # via aiohttp
 attrs==21.2.0
     # via
+    #   aiohttp
     #   jsonschema
     #   pytest
 babel==2.9.1
@@ -32,6 +45,8 @@ black==21.5b1
     # via -r /home/israel/pandawans/101-kedro-spotify/src/requirements.in
 bleach==4.1.0
     # via nbconvert
+botocore==1.22.8
+    # via aiobotocore
 cachetools==4.2.4
     # via kedro
 certifi==2021.10.8
@@ -42,6 +57,8 @@ chardet==4.0.0
     # via
     #   binaryornot
     #   requests
+charset-normalizer==2.0.9
+    # via aiohttp
 click==7.1.2
     # via
     #   black
@@ -67,8 +84,14 @@ entrypoints==0.3
     #   nbconvert
 flake8==3.9.2
     # via -r /home/israel/pandawans/101-kedro-spotify/src/requirements.in
+frozenlist==1.2.0
+    # via
+    #   aiohttp
+    #   aiosignal
 fsspec==2021.11.1
-    # via kedro
+    # via
+    #   kedro
+    #   s3fs
 gitdb==4.0.9
     # via gitpython
 gitpython==3.1.24
@@ -77,6 +100,7 @@ idna==2.10
     # via
     #   anyio
     #   requests
+    #   yarl
 importlib-resources==5.4.0
     # via jsonschema
 iniconfig==1.1.1
@@ -120,7 +144,9 @@ jinja2==3.0.3
 jinja2-time==0.2.0
     # via cookiecutter
 jmespath==0.10.0
-    # via kedro
+    # via
+    #   botocore
+    #   kedro
 json5==0.9.6
     # via jupyterlab-server
 jsonschema==4.2.1
@@ -179,6 +205,10 @@ mccabe==0.6.1
     # via flake8
 mistune==0.8.4
     # via nbconvert
+multidict==5.2.0
+    # via
+    #   aiohttp
+    #   yarl
 mypy-extensions==0.4.3
     # via black
 nbclassic==0.3.4
@@ -278,6 +308,7 @@ pytest-mock==1.13.0
 python-dateutil==2.8.2
     # via
     #   arrow
+    #   botocore
     #   jupyter-client
 python-json-logger==2.0.2
     # via kedro
@@ -308,6 +339,8 @@ requests==2.25.1
     #   kedro-telemetry
 rope==0.21.1
     # via kedro
+s3fs==2021.11.1
+    # via -r /home/israel/pandawans/101-kedro-spotify/src/requirements.in
 send2trash==1.8.0
     # via
     #   jupyter-server
@@ -363,9 +396,13 @@ traitlets==5.1.1
     #   notebook
     #   qtconsole
 typing-extensions==4.0.1
-    # via gitpython
+    # via
+    #   async-timeout
+    #   gitpython
 urllib3==1.26.7
-    # via requests
+    # via
+    #   botocore
+    #   requests
 wcwidth==0.2.5
     # via prompt-toolkit
 webencodings==0.5.1
@@ -378,6 +415,10 @@ wheel==0.36.2
     #   pip-tools
 widgetsnbextension==3.5.2
     # via ipywidgets
+wrapt==1.13.3
+    # via aiobotocore
+yarl==1.7.2
+    # via aiohttp
 zipp==3.6.0
     # via importlib-resources
 

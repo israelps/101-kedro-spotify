@@ -2,3 +2,22 @@
 #
 # Documentation for this file format can be found in "The Data Catalog"
 # Link: https://kedro.readthedocs.io/en/stable/05_data/01_data_catalog.html
+
+song_info:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/song_info.csv
+  load_args:
+    parse_dates: ["release_date"]
+    index_col: id
+
+song_metrics:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/song_metrics.csv
+  load_args:
+    index_col: id
+
+song_popularity:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/song_popularity.csv
+  load_args:
+    index_col: id

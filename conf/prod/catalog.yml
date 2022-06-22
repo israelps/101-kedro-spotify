@@ -1,0 +1,4 @@
+prm_spotify_data:
+  type: pandas.ParquetDataSet
+  filepath: s3://101-kedro-spotify/02-intermediate/prm_spotify_data.parquet
+  credentials: dev_minio
